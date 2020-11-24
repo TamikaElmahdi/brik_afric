@@ -1,0 +1,24 @@
+{
+  "name": "latest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "f": "cd Front && ng serve --port 4201",
+    "m": "cd api && dotnet ef migrations add first && dotnet ef database drop -f && dotnet ef database update && dotnet watch run",
+    "b": "cd Api && dotnet watch run",
+    "prod-front": "cd Front && ng build --prod",
+    "prod-back": "cd api && dotnet publish -o D:/MarIT/GestionCommerciale/deploy",
+    "ci": "npm run prod-front && npm run push",
+    "prod": "npm run prod-front && npm run prod-back",
+    "init": "git init && git remote add origin https://github.com/TamikaElmahdi/brik_afric.git",
+    "push": "git add . && git commit -m \"commit\" && git push -u origin master",
+    "git-login": "git config --global user.email",
+    "git": "npm run f-git-cm && npm run b-git-cm",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {}
+}

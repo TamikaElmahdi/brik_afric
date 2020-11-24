@@ -1,0 +1,1 @@
+dotnet add package Microsoft.EntityFrameworkCore.Design --version 3.1.0
