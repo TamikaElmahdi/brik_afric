@@ -37,8 +37,8 @@ namespace GestionCommerciale
             services.AddControllers();
             services.AddDbContext<MyDbContext>(options =>
             {
-                options.UseSqlServer(Configuration.GetConnectionString("me"));
-                //options.UseSqlite(Configuration.GetConnectionString("sqlite"));
+                //options.UseSqlServer(Configuration.GetConnectionString("me"));
+                options.UseSqlite(Configuration.GetConnectionString("sqlite"));
             });
 
             services.AddCors(options =>
