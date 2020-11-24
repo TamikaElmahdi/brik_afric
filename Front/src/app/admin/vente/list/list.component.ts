@@ -79,7 +79,7 @@ export class ListComponent implements OnInit {
         !this.paginator.pageSize ? this.paginator.pageSize = 10 : r = r;
         const startIndex = this.paginator.pageIndex * this.paginator.pageSize;
 
-        // console.log(this.d1.value); 
+        // console.log(this.d1.value);
         // return;
         this.getPage(
           {

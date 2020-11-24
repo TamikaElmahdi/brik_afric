@@ -71,7 +71,7 @@ namespace GestionCommerciale.Controllers
                 .Where(r => idCategorie == 0 ? true : r.SousCategorie.IdCategorie == idCategorie)
                 .Where(r => idSousCategorie == 0 ? true : r.IdSousCategorie == idSousCategorie)
                 .Where(r => idFournisseur == 0 ? true : r.Fournitures.Any(c => c.IdFournisseur == idFournisseur))
-                .OrderByDescending(o => o.Id)
+                //.OrderByDescending(o => o.Id)
                 ;
 
             int count = await q.CountAsync();

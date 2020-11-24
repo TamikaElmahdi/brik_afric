@@ -72,9 +72,12 @@ namespace GestionCommerciale.Controllers
 
             int count = await q.CountAsync();
 
+            // decimal credit = await q.SumAsync(e => e.Credit);
+            // decimal avance = await q.SumAsync(e => e.Avance);
+
             decimal credit = await q.SumAsync(e => e.Credit);
             decimal avance = await q.SumAsync(e => e.Avance);
-
+            
             var list = await q
                 .Skip(data.StartIndex)
                 .Take(data.PageSize)
@@ -83,7 +86,7 @@ namespace GestionCommerciale.Controllers
                 .ToListAsync()
                 ;
 
-            return Ok(new { list = list, count = count, credit, avance });
+            return Ok(new { list = list, count = 2, credit, avance });
         }
 
         [HttpGet("{value}")]
